@@ -38,6 +38,9 @@ class User(db.Model):
 # SELECT * FROM users;
 # users = User.query.all() # 복수
 
+# SELECT * FROM users WHERE username='hyeonjin23';
+# users = User.query.filter_by(username='hyeonjin23').all()
+
 # SELECT * FROM users WHERE username='hyeonjin23' LIMIT 1;
 # user = User.query.filter_by(username='hyeonjin23').first()
 
@@ -47,3 +50,27 @@ class User(db.Model):
 
 # SELECT * FROM users WHERE email LIKE '%cho%'
 # users = User.query.filter(User.email.like("%cho%")).all()
+
+# ORDER
+# users = User.query.order_by(User.username).all()
+
+# LIMIT
+# users = User.query.limit(1).all
+
+# OFFSET
+# users = User.query.offset(2).all()
+
+# ORDER + LIMIT + OFFSET
+# users = User.query.order_by(User.username).limit(1).offset(2).all()
+
+# [DELETE]
+# DELETE FROM users WHERE id = 1;
+# user = User.query.get(1)
+# db.session.delete(user)
+# db.session.commit()
+
+# [UPDATE]
+# UPDATE users SET username='hyeonjin' WHERE id=2;
+# user = User.query.get(2)
+# user.username = 'hyeonjin'
+# db.session.commit()
