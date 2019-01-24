@@ -18,6 +18,17 @@ from django.urls import path
 from pages import views
 
 urlpatterns = [
+    path('bootstrap/', views.bootstrap),
+    path('naver/', views.naver),
+    path('catch/', views.catch),
+    path('throw/', views.throw),
+    path('coffee/', views.coffee),
+    path('say/<str:name>', views.say),
+    path('smile/', views.smile),
+    path('id/<str:num>', views.id),
+    path('burger/', views.burger),
+    path('hello/<str:name>/', views.hello),
+    path('dinner/', views.dinner),
     path('index/', views.index),
     path('admin/', admin.site.urls),
 ]
