@@ -7,7 +7,7 @@ urlpatterns = [
     path('musics/', views.music_list),
     path('musics/<int:music_id>/', views.music_detail),
     path('musics/<int:music_id>/comments/', views.comment_create),
-    path('musics/<int:music_id>/comments/<int:comment_id>/', views.comment_update_and_delete),
+    path('musics/<int:music_id>/comments/<int:comment_id>/', views.comment_update_deletee_and_delete),
     path('artists/', views.artist_list),
     path('artists/<int:artist_id>/', views.artist_detail),
 ]

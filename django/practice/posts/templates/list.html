@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block container %}
+
+<a href="{% url 'posts:create' %}">글작성</a>
+<div>
+    {% for post in posts %}
+
+    {{ post.content }}
+
+    {% endfor %}
+</div>
+<div>
+    {% for people in users %}
+    {{ user.name }}
+    {% endfor %}
+</div>
+{% endblock %}
